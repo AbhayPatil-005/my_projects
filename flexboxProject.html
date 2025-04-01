@@ -5,25 +5,29 @@
     <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
     <title>Flexbox Navbar and Cards</title>
     <style>
+        /* styling the navigation bar */
         .nav{
-            display: flex;
+            display: flex; /* creating flex container */
             background-color: rgb(157, 157, 204);
-            align-items: center;
-            justify-content: space-between;
+            align-items: center;    /*align-items controls how flexbox or grid items are aligned along the cross-axis (vertical by default in flexbox) within their container. */
+            justify-content: space-between;/*controls the alignment of items along the main axis of a flex container*/
             border-radius:5px;
             padding: 10px 10px;
         }
+        /* styling the li elements or list items inside the ul list */
         .nav-link{
             display: flex;
-            gap: 10px;
+            gap: 10px; /*defines the size of the gap between the rows and between the columns in flexbox, grid or multi-column layout */
             list-style: none;
             
         }
+        /* styling the logo and navigation bar */
         .nav-link a, .logo{
             text-decoration: none;
             color: white;
             font-size: 1.5rem;
         }
+        /* styling the section part*/
         .card-container{
             display: flex;
             align-items: center;
@@ -31,17 +35,17 @@
             gap: 20px;
             margin-top: 20px
         }
+        /* styling the card items inside the section */
         .card{
             padding: 10px;
             text-align: center;
             border-radius:10px;
-
-
         }
     </style>
 
 </head>
 <body>
+    <!-- created a nav section as parent for div and ul-->
     <nav class="nav">
         <div class="logo">Logo</div>
         <ul class="nav-link">
@@ -51,7 +55,7 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
-
+   <!--creating a separate section to hold the card items after the nav bar -->
     <section class="card-container">
         <div class="card" style="background-color: aqua;">
             <h3>Card 1</h3>
