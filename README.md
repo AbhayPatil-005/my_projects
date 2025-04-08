@@ -23,7 +23,8 @@ It includes a navigation bar and a set of styled cards that adjust flexibly base
 
 ## 📸 Screenshots
 
-Coming soon! *(You can add screenshots or a GIF here later)*
+![image](https://github.com/user-attachments/assets/e9b3985b-b974-49ca-a9f3-d582ca4495fe)
+
 
 ---
 
