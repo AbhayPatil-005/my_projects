@@ -21,3 +21,4 @@ This helped strengthen my understanding of:
 🎯 **Goal**: Build confidence in working with the JavaScript DOM to create interactive and dynamic webpages.
 
 ### 📸 photo:
+![image](https://github.com/user-attachments/assets/44f7240c-dc81-445b-8dd7-cbc6de5b7e93)
