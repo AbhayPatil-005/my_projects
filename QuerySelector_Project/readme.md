@@ -1,4 +1,4 @@
-#🍎 Fruit World – DOM Styling Mini Project
+# 🍎 Fruit World – DOM Styling Mini Project
 This mini project demonstrates how to dynamically style HTML elements using **JavaScript DOM manipulation**. It focuses on using querySelector, querySelectorAll, and applying various inline styles to elements like headings, lists, and list items.
 
 ##🧠 What I Learned
