@@ -38,7 +38,6 @@ This project demonstrates how to dynamically add, delete, and manage list items 
 This project helped in understanding:
 - DOM element creation and manipulation
 - Event handling for forms and buttons
-- CSS styling for interactive UI elements
 
 ---
 
