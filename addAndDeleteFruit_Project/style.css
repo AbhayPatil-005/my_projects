@@ -9,8 +9,84 @@ body {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
   }
-  
+  /* code starts down below */
+  #header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+  }
+  #header input {
+    width: 30%;
+    
+    border: 2px solid gray;
+    border-radius: 10px;
+  }
   h1 {
     font-size: 1.5rem;
+    background-color: lavenderblush;
+    padding: 10px;
+    border: none;
+    border-style: ridge;
+    border-radius:50%;
   }
   
+  h2{
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  form{
+    width: 100%
+  }
+  form input{
+    height: 35px;
+    width: 40%;
+    margin-top: 5px;
+    background-color: aliceblue;
+    border : solid 1px;
+    border-radius: 5px;
+  }
+  form button{
+    height: 40px;
+    width: 10%;
+    background-color: rgb(153, 224, 199);
+    border-radius: 5px;
+    border: none;
+  }
+  .delete-btn{
+    align-self: flex-end;
+    color: white;
+    background-color: tomato;
+    border-radius: 2px;
+    border: 0px;
+    left: 100px;
+    padding: 5px 18px;
+    
+  }
+  .edit-btn{
+    align-self: flex-end ;
+    color: blue;
+    border-radius: 2px;
+    padding: 5px 10px;
+    border: none;
+    left: 10px;
+    margin-top: 5px;
+  }
+  ul{
+    list-style-type:none ;
+    background-color: lightpink;
+    padding: 5px;
+    margin:0 30px
+    width: 50;
+    border-radius: 5px;
+  }
+  li{
+    font-size: 20px;
+    padding:10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }

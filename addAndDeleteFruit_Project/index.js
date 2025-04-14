@@ -34,7 +34,7 @@ for (let i=0; i<li.length; i++){
     // creating the edit button without functionality
     const editbtn = document.createElement("button");
     editbtn.textContent="Edit";
-    editbtn.setClassName= "edit-btn"
+    editbtn.className= "edit-btn"
     // appending editbtn to li as child
     li[i].appendChild(editbtn);
 }
