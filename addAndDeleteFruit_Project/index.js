@@ -48,3 +48,21 @@ fruits.addEventListener('click', function(event){
     };
 });
 
+// adding filter functionality
+// access the input element
+const filter = document.getElementById('filter');
+// add event listener
+filter.addEventListener('keyup', function(event){
+    // access the input text with lowercase form for convenience
+    const textEntered = event.target.value.toLowerCase();
+    // grab li elements
+    const fruitItems = document.getElementsByClassName("fruit");
+    for (let i = 0; i< fruitItems.length; i++){
+        const currentItem = fruitItems[i].firstChild.textContent.toLocaleLowerCase();
+        if (currentItem.indexOf(textEntered)===-1){
+            fruitItems[i].style.display="none"; //if the entered text,is not found in fruit list then it hides
+        }else{
+            fruitItems[i].style.display="flex"; // if the entered text is found in fruit list then it displays
+        }
+    }
+}); 

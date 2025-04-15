@@ -17,10 +17,10 @@ This project demonstrates how to dynamically add, delete, and manage list items 
 
 - `document.createElement()`
 - `appendChild()` & `insertBefore()`
-- `addEventListener()`
+- `addEventListener()`,`keyup`
 - DOM traversal using `parentElement`
 - Class assignment using `className` and `setAttribute()`
-
+- `indexOf` to check the matching input's presence
 ---
 
 ## 🛠️ How it Works
@@ -31,6 +31,9 @@ This project demonstrates how to dynamically add, delete, and manage list items 
    - Delete and Edit buttons are added as children.
    - The new item is appended to the existing fruit list.
 3. When the ❌ button is clicked, the corresponding fruit `li` is removed.
+4. When the input is given in the search fruits bar
+   - it converts all the text to lowercase.
+   - it then finds the matching char to filter out the fruit items in the list.
 
 ---
 ## 📚 Learnings
@@ -38,17 +41,17 @@ This project demonstrates how to dynamically add, delete, and manage list items 
 This project helped in understanding:
 - DOM element creation and manipulation
 - Event handling for forms and buttons
-
+- Filter algorithm to search with input 
 ---
 
 ## ✅ Status
 
 ✅ Basic Add/Delete features working  
 🟡 Edit button UI added (functionality not implemented yet)
+🔍 Filter functionality is added
 
 ---
 
 ## 🔗 Future Improvements
 
 - Implement Edit functionality to allow fruit name updates
-- Implement Filter functionality to search the fruit name

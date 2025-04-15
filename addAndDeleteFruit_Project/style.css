@@ -41,6 +41,7 @@ body {
   form input{
     height: 35px;
     width: 40%;
+    margin-left: 10px;
     margin-top: 5px;
     background-color: aliceblue;
     border : solid 1px;
@@ -75,10 +76,11 @@ body {
   ul{
     list-style-type:none ;
     background-color: lightpink;
-    padding: 5px;
-    margin:0 30px
-    width: 50;
+    width: 40%;
     border-radius: 5px;
+    padding: 5px;
+    margin:10px 10px
+    
   }
   li{
     font-size: 20px;
