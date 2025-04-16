@@ -6,7 +6,8 @@ This project demonstrates how to dynamically add, delete, and manage list items 
 
 ## 📌 Features
 
-- Add a new fruit to the list by typing in the input box and clicking "Add"
+- Add a new fruit and it's description to the list by typing in the 
+  respective input box and clicking "Add".
 - Delete a fruit using the ❌ delete button
 - Edit button added next to each fruit (functionality to be added later)
 - Basic styling applied to elements using CSS
@@ -21,6 +22,7 @@ This project demonstrates how to dynamically add, delete, and manage list items 
 - DOM traversal using `parentElement`
 - Class assignment using `className` and `setAttribute()`
 - `indexOf` to check the matching input's presence
+
 ---
 
 ## 🛠️ How it Works
@@ -34,7 +36,9 @@ This project demonstrates how to dynamically add, delete, and manage list items 
 4. When the input is given in the search fruits bar
    - it converts all the text to lowercase.
    - it then finds the matching char to filter out the fruit items in the list.
-
+5. You can add descriptions to fruits by clicking on the description 
+   input bar. 
+6. You can also filter the fruits using description of the fruit 
 ---
 ## 📚 Learnings
 
@@ -49,6 +53,7 @@ This project helped in understanding:
 ✅ Basic Add/Delete features working  
 🟡 Edit button UI added (functionality not implemented yet)
 🔍 Filter functionality is added
+📝 Added fucntionality to add description to fruit
 
 ---
 
