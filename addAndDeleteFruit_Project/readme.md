@@ -50,10 +50,10 @@ This project helped in understanding:
 
 ## ✅ Status
 
-✅ Basic Add/Delete features working  
-🟡 Edit button UI added (functionality not implemented yet)
-🔍 Filter functionality is added
-📝 Added fucntionality to add description to fruit
+✅ Basic Add/Delete features working.  
+🟡 Edit button UI added (functionality not implemented yet).
+🔍 Filter functionality is added.
+📝 Added fucntionality to add description to fruit.
 
 ---
 
