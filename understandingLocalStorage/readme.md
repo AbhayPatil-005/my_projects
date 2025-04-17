@@ -27,4 +27,5 @@ This is a simple form project built using **HTML**, **CSS**, and **Vanilla JavaS
 4. Check the browser's **local storage** to see saved data (`DevTools > Application > Local Storage`).
 
 ## 📷 Demo
+![image](https://github.com/user-attachments/assets/1b314065-37b2-4506-a073-3d03a944adbe)
 
