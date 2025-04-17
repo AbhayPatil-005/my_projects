@@ -39,4 +39,5 @@ A mini project built using **HTML**, **CSS**, and **JavaScript** that stores use
 
 ## 📸 preview
 
+![image](https://github.com/user-attachments/assets/c0a2735d-10a7-466f-a35f-2a3c64e85ef6)
 
