@@ -34,3 +34,6 @@ A simple vanilla JavaScript project that stores, displays, and deletes user info
 3. Fill in the form and watch your data appear below.
 
 ## 📸 Screenshot
+
+![image](https://github.com/user-attachments/assets/77f0844d-3cb0-4456-91bc-d1cd882e255e)
+![image](https://github.com/user-attachments/assets/c9d25428-6db2-4a2c-ad86-cde6ec917ca0)
