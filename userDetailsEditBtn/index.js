@@ -49,7 +49,7 @@ function handleSubmit(event) {
 
         // Clear edit state and reset button text
         sessionStorage.removeItem("editId");
-        const submitBtn = document.querySelector("#button");
+        const submitBtn = document.querySelector("#submit");
         submitBtn.textContent = "Submit";
 
     } else {
@@ -59,6 +59,9 @@ function handleSubmit(event) {
 
     // Save updated list to localStorage
     localStorage.setItem('usersList', JSON.stringify(usersList));
+
+    event.target.reset(); // Clears input fields
+    document.querySelector("#submit").textContent = "Submit";
 }
 
 // Displays a user item on the screen
