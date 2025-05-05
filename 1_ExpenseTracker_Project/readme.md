@@ -53,6 +53,7 @@ This is a lightweight Expense Tracker web app built using **HTML**, **CSS**, **J
 
 ## 📸 Preview
 
+![image](https://github.com/user-attachments/assets/2393fb6d-1cdf-4275-bf88-3dfb6c16b933)
 
 
 ---
