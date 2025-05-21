@@ -1,0 +1,116 @@
+h1{
+    color: rgb(229, 241, 214);
+    background-color:transparent;
+    padding: 5px;
+    border-radius: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.classLi .title{
+    font-family:cursive;
+    font-weight: bold;
+}
+.classLi .notes{
+   font-family:'Times New Roman', Times, serif ;
+}
+
+#div1 {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgb(82, 101, 82);
+    border-radius: 40px;
+    padding: 20px;
+    
+    display: flex;                 /* Enables flexbox */
+    flex-direction: row;       /* Stack vertically */
+    align-items: center;          /* Horizontally center */
+    justify-content: center;      /* Vertically center */
+    text-align:center;
+    gap: 5px;
+}
+#div2{
+    margin-top: 2%;
+    margin-left: 30px;
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#searchNotes{
+    background-color:transparent;
+    border-radius: 3px;
+    padding: 1%;
+    border: none;
+
+}
+#showing{
+    color: lavender;
+}
+#totalNotes{
+    color: lavender;
+}
+label[for="searchNotes"] {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+}
+label[for="totalNotes"]{
+    color: white;
+}
+label[for="showing"]{
+    color: white;
+}
+
+
+body{
+    background:url('image.jpg')center/cover no-repeat;
+    background-attachment: fixed;
+    
+}
+#noteTitle{
+    padding: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    width: 30%;
+   
+}
+textarea {
+    width: 30%;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+}
+ul {
+    padding-left: 0;
+    padding-right: 5px;
+    background-color: transparent ;
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 10px;
+
+}
+.classLi {
+    display: list-item;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+    list-style: number;
+    margin-left: 25px;
+    padding: 10px;
+    color: rgb(206, 234, 172);
+
+}
+
+::placeholder{
+    color: black;
+}
