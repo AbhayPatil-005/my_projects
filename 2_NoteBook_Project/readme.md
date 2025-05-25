@@ -14,7 +14,7 @@ This is a simple note-taking web app built with **vanilla JavaScript**, where yo
 ## 💻 Tech Stack
 
 - HTML
-- CSS (minimal)
+- CSS 
 - JavaScript (DOM manipulation, event handling)
 - [Axios](https://axios-http.com/docs/intro)for HTTP requests
 - [CRUDCRUD](https://crudcrud.com/) for free temporary REST API
