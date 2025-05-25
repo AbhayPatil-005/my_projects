@@ -12,7 +12,7 @@ function handleFormSubmit(event) {
     };
 
     // Send the note to the backend (CRUDCRUD API)
-    axios.post("https://crudcrud.com/api/8078ae94a2ff4a68953f723f419a08ac/noteList", notes)
+    axios.post("https://crudcrud.com/api/9e14beab52eb4a7e8a3498cfa0ce926b/noteList", notes)
     .then((result) => {
         // Display the newly created note on the page
         displayNotes(result.data);
@@ -82,6 +82,8 @@ function displayNotes(notesData) {
     // Create and add delete button
     const deletebtn = document.createElement('button');
     deletebtn.textContent = "Delete";
+    deletebtn.style.cssText="background-color:lightgoldenrodyellow; border-radius:5px; border:1px solid black; padding:5px";
+
     notesli.appendChild(deletebtn);
 
     // Append the list item to the <ul>
@@ -90,7 +92,7 @@ function displayNotes(notesData) {
 
     // Add delete logic for this note
     deletebtn.addEventListener('click', () => {
-        axios.delete(`https://crudcrud.com/api/8078ae94a2ff4a68953f723f419a08ac/noteList/${notesData._id}`)
+        axios.delete(`https://crudcrud.com/api/9e14beab52eb4a7e8a3498cfa0ce926b/noteList/${notesData._id}`)
         .then((result) => {
             console.log(result);
             notesli.remove(); // Remove from UI
@@ -106,7 +108,7 @@ function displayNotes(notesData) {
 
 // Load all existing notes when the page loads
 window.addEventListener('DOMContentLoaded', () => {
-    axios.get("https://crudcrud.com/api/8078ae94a2ff4a68953f723f419a08ac/noteList")
+    axios.get("https://crudcrud.com/api/9e14beab52eb4a7e8a3498cfa0ce926b/noteList")
     .then((result) => {
         totalCount = result.data.length;
         for (let i = 0; i < result.data.length; i++) {
