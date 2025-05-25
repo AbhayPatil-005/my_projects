@@ -16,7 +16,7 @@ This is a simple note-taking web app built with **vanilla JavaScript**, where yo
 - HTML
 - CSS (minimal)
 - JavaScript (DOM manipulation, event handling)
-- [Axios]for HTTP requests
+- [Axios](https://axios-http.com/docs/intro)for HTTP requests
 - [CRUDCRUD](https://crudcrud.com/) for free temporary REST API
 
 ## 🎯 Learning Objectives
@@ -32,4 +32,8 @@ This is a simple note-taking web app built with **vanilla JavaScript**, where yo
 - No user authentication or advanced error handling is implemented.
 
 ## 📸 Preview
+
+![Screenshot 2025-05-21 232530](https://github.com/user-attachments/assets/e39a64f6-2c39-4226-88dc-f7c7b2b02dfa)
+
+https://github.com/user-attachments/assets/77397414-1d72-4477-8b78-070652810638
 
