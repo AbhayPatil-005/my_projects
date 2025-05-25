@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Note Book</title>
-        <link rel="stylesheet" href="styles.css"></link>
-    </head>
-    <body>
-        <div class="mainDiv">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Book</title>
+
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css"></link>
+</head>
+<body>
+    <!-- Main container wrapping the whole note-taking app -->
+    <div class="mainDiv">
+
+        <!-- Note submission form; calls handleFormSubmit() on submit -->
         <form onsubmit="handleFormSubmit(event)">
-        <h1>NoteBook</h1>
-        <div id="div1">
-            <label for="searchNotes">Search Notes: </label> 
-            <input type="text" id="searchNotes" placeholder="Type..."><br>
-
-            <label for="totalNotes">Total Notes: </label>
-            <input id="totalNotes" style="border: none; background-color: transparent; width: 50px;" value="0" disabled><br>
-
-            <label for="showing">Showing: </label>
-            <input id="showing" style="border: none; background-color: transparent; width: 50px;" value="0" disabled>
-        </div>
-
-        <div id="div2">
-            <label for="noteTitle" style="color: floralwhite; font-weight: bold;background-color: rgb(82, 101, 82); backdrop-filter: blur(10px); padding: 5px;margin-bottom: 5px;margin-right: 5px; border-radius: 5px;">Note Title: </label>
-            <input type="text" id="noteTitle" autocomplete="off" placeholder="Enter the title">
-            <br>
-            <label for="description" style="color: floralwhite;font-weight: bold; background-color: rgb(82, 101, 82); backdrop-filter: blur(10px); padding: 5px; border-radius: 5px;">Note Description: </label> 
-            <textarea name="Note Description" id="description" placeholder="Write..." rows="5" cols="50"></textarea>
             
-            <button type="submit" id="addBook" style="width: 10%; border-radius: 5px; border: none; padding: 5px;">Add Book</button>
-        </div>
+            <!-- Main heading -->
+            <h1>NoteBook</h1>
+            
+            <!-- Top controls: search input and note counters -->
+            <div id="div1">
+                <!-- Search notes input -->
+                <label for="searchNotes">Search Notes: </label> 
+                <input type="text" id="searchNotes" placeholder="Type..."><br>
+
+                <!-- Display total number of notes stored -->
+                <label for="totalNotes">Total Notes: </label>
+                <input id="totalNotes" style="border: none; background-color: transparent; width: 50px;" value="0" disabled><br>
+
+                <!-- Display number of notes currently shown after filtering -->
+                <label for="showing">Showing: </label>
+                <input id="showing" style="border: none; background-color: transparent; width: 50px;" value="0" disabled>
+            </div>
+
+            <!-- Input section for adding new notes -->
+            <div id="div2">
+                <!-- Label for note title input with inline styles -->
+                <label for="noteTitle" style="color: floralwhite; font-weight: bold; background-color: rgb(82, 101, 82); backdrop-filter: blur(10px); padding: 5px; margin-bottom: 5px; margin-right: 5px; border-radius: 5px;">
+                    Note Title: 
+                </label>
+                <!-- Text input for note title -->
+                <input type="text" id="noteTitle" autocomplete="off" placeholder="Enter the title">
+                <br>
+
+                <!-- Label for note description textarea with inline styles -->
+                <label for="description" style="color: floralwhite; font-weight: bold; background-color: rgb(82, 101, 82); backdrop-filter: blur(10px); padding: 5px; border-radius: 5px;">
+                    Note Description: 
+                </label>
+                <!-- Textarea for detailed note description -->
+                <textarea name="Note Description" id="description" placeholder="Write..." rows="5" cols="50"></textarea>
+                
+                <!-- Submit button to add the note -->
+                <button type="submit" id="addBook" style="width: 10%; border-radius: 5px; border: none; padding: 5px;">Add Book</button>
+            </div>
         </form>
+
+        <!-- Unordered list where notes will be dynamically added -->
         <ul></ul>
+
+        <!-- Axios library for HTTP requests -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+        <!-- Main JavaScript file with app logic -->
         <script src="index.js"></script>
-        </div>
-    </body>
-</html> 
+
+    </div>
+</body>
+</html>

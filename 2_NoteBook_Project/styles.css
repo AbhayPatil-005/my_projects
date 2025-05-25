@@ -1,75 +1,86 @@
-h1{
-    color: rgb(229, 241, 214);
-    background-color:transparent;
+/* Main Heading Styling */
+h1 {
+    color: rgb(229, 241, 214);               /* Light greenish text color */
+    background-color: transparent;           /* Transparent background */
     padding: 5px;
-    border-radius: 40px;
+    border-radius: 40px;                     /* Rounded edges */
     text-align: center;
     margin-bottom: 10px;
 }
 
-.classLi .title{
-    font-family:cursive;
+/* Title style inside a note */
+.classLi .title {
+    font-family: cursive;
     font-weight: bold;
 }
-.classLi .notes{
-   font-family:'Times New Roman', Times, serif ;
+
+/* Description style inside a note */
+.classLi .notes {
+    font-family: 'Times New Roman', Times, serif;
 }
 
+/* Container for search bar and counters */
 #div1 {
     background-color: transparent;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgb(82, 101, 82);
+    backdrop-filter: blur(10px);             /* Adds frosted glass effect */
+    border: 2px solid rgb(82, 101, 82);       /* Subtle border */
     border-radius: 40px;
     padding: 20px;
-    
-    display: flex;                 /* Enables flexbox */
-    flex-direction: row;       /* Stack vertically */
-    align-items: center;          /* Horizontally center */
-    justify-content: center;      /* Vertically center */
-    text-align:center;
-    gap: 5px;
+
+    display: flex;
+    flex-direction: row;                     /* Horizontal layout */
+    align-items: center;                     /* Vertically center items */
+    justify-content: center;                 /* Horizontally center content */
+    text-align: center;
+    gap: 5px;                                /* Space between items */
 }
-#div2{
+
+/* Layout and spacing for counter display */
+#div2 {
     margin-top: 2%;
     margin-left: 30px;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
-#searchNotes{
-    background-color:transparent;
+
+/* Search input field styling */
+#searchNotes {
+    background-color: transparent;
     border-radius: 3px;
     padding: 1%;
     border: none;
+}
 
-}
-#showing{
+/* Read-only counter inputs styling */
+#showing,
+#totalNotes {
     color: lavender;
 }
-#totalNotes{
-    color: lavender;
-}
+
+/* Search label */
 label[for="searchNotes"] {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: large;
     font-weight: bold;
     color: white;
 }
-label[for="totalNotes"]{
-    color: white;
-}
-label[for="showing"]{
+
+/* Labels for counter inputs */
+label[for="totalNotes"],
+label[for="showing"] {
     color: white;
 }
 
-
-body{
-    background:url('image.jpg')center/cover no-repeat;
-    background-attachment: fixed;
-    
+/* Page background */
+body {
+    background: url('image.jpg') center/cover no-repeat;  /* Full screen background image */
+    background-attachment: fixed;                         /* Fixed while scrolling */
 }
-#noteTitle{
+
+/* Title input field */
+#noteTitle {
     padding: 10px;
     background-color: transparent;
     backdrop-filter: blur(10px);
@@ -77,8 +88,9 @@ body{
     border-radius: 5px;
     color: white;
     width: 30%;
-   
 }
+
+/* Description textarea */
 textarea {
     width: 30%;
     margin: 5px 0;
@@ -89,28 +101,31 @@ textarea {
     background-color: transparent;
     backdrop-filter: blur(10px);
 }
+
+/* Notes list container */
 ul {
     padding-left: 0;
     padding-right: 5px;
-    background-color: transparent ;
+    background-color: transparent;
     backdrop-filter: blur(10px);
     border: none;
     border-radius: 10px;
-
 }
+
+/* Each individual note styling */
 .classLi {
     display: list-item;
     margin-top: 10px;
     border: 1px solid black;
     border-radius: 10px;
     overflow-wrap: break-word;
-    list-style: number;
+    list-style: number;                      /* Numbered list style */
     margin-left: 25px;
     padding: 10px;
-    color: rgb(206, 234, 172);
-
+    color: rgb(206, 234, 172);               /* Light greenish text */
 }
 
-::placeholder{
+/* Placeholder text color */
+::placeholder {
     color: black;
 }
