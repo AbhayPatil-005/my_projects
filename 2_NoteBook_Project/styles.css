@@ -1,16 +1,19 @@
 /* Main Heading Styling */
 h1 {
-    color: rgb(229, 241, 214);               /* Light greenish text color */
+    color: rgb(0, 0, 0);               /* Light greenish text color */
     background-color: transparent;           /* Transparent background */
     padding: 5px;
     border-radius: 40px;                     /* Rounded edges */
     text-align: center;
     margin-bottom: 10px;
+    transition-duration: 0.3s;
 }
-
+h1:hover{
+    text-shadow: 0 0 25px #ff00dd;
+}
 /* Title style inside a note */
 .classLi .title {
-    font-family: cursive;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -23,7 +26,7 @@ h1 {
 #div1 {
     background-color: transparent;
     backdrop-filter: blur(10px);             /* Adds frosted glass effect */
-    border: 2px solid rgb(82, 101, 82);       /* Subtle border */
+    border: 2px solid burlywood;       
     border-radius: 40px;
     padding: 20px;
 
@@ -56,7 +59,7 @@ h1 {
 /* Read-only counter inputs styling */
 #showing,
 #totalNotes {
-    color: lavender;
+    color: black
 }
 
 /* Search label */
@@ -64,30 +67,36 @@ label[for="searchNotes"] {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: large;
     font-weight: bold;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /* Labels for counter inputs */
 label[for="totalNotes"],
 label[for="showing"] {
-    color: white;
+    color: black;
 }
 
 /* Page background */
 body {
-    background: url('image.jpg') center/cover no-repeat;  /* Full screen background image */
-    background-attachment: fixed;                         /* Fixed while scrolling */
+    background: url('landscape.jpg') center/cover no-repeat;  /* Full screen background image */
+    background-attachment:fixed;                         /* Fixed while scrolling */
 }
 
 /* Title input field */
 #noteTitle {
     padding: 10px;
     background-color: transparent;
-    backdrop-filter: blur(10px);
-    border: 1px solid white;
+    backdrop-filter:blur(8px);
+    border: 2px solid rgba(173, 216, 230, 0.315);
     border-radius: 5px;
-    color: white;
+    color: black;
     width: 30%;
+}
+#noteTitle:hover{
+box-shadow: 0px 0px 2px rgb(0, 191, 255);
+}
+textarea:hover{
+box-shadow: 0px 0px 2px rgb(233, 0, 254)
 }
 
 /* Description textarea */
@@ -96,10 +105,11 @@ textarea {
     margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid white;
-    color: white;
+    border: 2px solid rgba(227, 176, 232, 0.317);
+    color: black;
     background-color: transparent;
-    backdrop-filter: blur(10px);
+    backdrop-filter:blur(8px);
+
 }
 
 /* Notes list container */
@@ -116,16 +126,33 @@ ul {
 .classLi {
     display: list-item;
     margin-top: 10px;
-    border: 1px solid black;
+    border: 2px solid rgba(0, 255, 72, 0.114);
     border-radius: 10px;
     overflow-wrap: break-word;
     list-style: number;                      /* Numbered list style */
     margin-left: 25px;
     padding: 10px;
-    color: rgb(206, 234, 172);               /* Light greenish text */
+    color: rgb(0, 0, 0);            
 }
 
 /* Placeholder text color */
 ::placeholder {
-    color: black;
+    color: rgba(0, 0, 0, 0.347);
+}
+/* delete button */
+.delete{
+border-radius:5px; 
+border:none; 
+padding:5px;
+}
+/* hover effects for addBook and delete button */
+#addBook:hover{
+  background-color: #04AA6D; /* Green */
+  color: white;
+  transition-duration: 0.2s;
+}
+.delete:hover{
+color: white;
+background-color:tomato; 
+transition-duration: 0.2s;
 }
