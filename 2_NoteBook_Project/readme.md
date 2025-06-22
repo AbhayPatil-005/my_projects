@@ -33,8 +33,9 @@ This is a simple note-taking web app built with **vanilla JavaScript**, where yo
 
 ## 📸 Preview
 
-https://youtu.be/ApDHYRr_A3o
-![Screenshot 2025-05-21 232530](https://github.com/user-attachments/assets/e39a64f6-2c39-4226-88dc-f7c7b2b02dfa)
+[https://youtu.be/ApDHYRr_A3o](https://youtu.be/QRhYIt2nT48?si=Mp8r4JTtgFYpjqXk)
+![image](https://github.com/user-attachments/assets/eb6e581b-2e81-45d4-88f0-94a420277451)
+
 
 
 
