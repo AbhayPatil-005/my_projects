@@ -10,7 +10,7 @@ async function handleFormSubmit(event) {
     };
 
        try { 
-        const result  = await axios.post("https://crudcrud.com/api/4ba03bc3d4cf4930a1652b493877e5e5/noteList", notes)
+        const result  = await axios.post("https://crudcrud.com/api/309f2a9f7c144c4984474b0ba71697c1/noteList", notes)
         displayNotes(result.data)
         totalCount++;
         document.getElementById('totalNotes').value = totalCount;
@@ -82,7 +82,7 @@ function displayNotes(notesData) {
 
 
     deletebtn.addEventListener('click', () => {
-        axios.delete(`https://crudcrud.com/api/4ba03bc3d4cf4930a1652b493877e5e5/noteList/${notesData._id}`)
+        axios.delete(`https://crudcrud.com/api/309f2a9f7c144c4984474b0ba71697c1/noteList/${notesData._id}`)
         .then(()=>{
           notesli.remove();
             totalCount--;     
@@ -97,7 +97,7 @@ function displayNotes(notesData) {
 
 window.addEventListener('DOMContentLoaded',() => {
 
-    axios.get("https://crudcrud.com/api/4ba03bc3d4cf4930a1652b493877e5e5/noteList")
+    axios.get("https://crudcrud.com/api/309f2a9f7c144c4984474b0ba71697c1/noteList")
     .then((result)=>{
         totalCount = result.data.length;
         console.log(totalCount)
