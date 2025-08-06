@@ -1,5 +1,5 @@
 # NoteBook - Note Taking App using JavaScript and CRUDCRUD API
-Link - zingy-choux-cb4c92.netlify.app
+Link - https://2-note-book-app.netlify.app/)
 
 This is a simple note-taking web app built with **vanilla JavaScript**, where you can **add, search, and delete notes**. It uses the [CRUDCRUD API](https://crudcrud.com/) to simulate a backend with persistent storage for learning purposes.
 
