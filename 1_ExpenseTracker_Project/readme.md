@@ -1,5 +1,5 @@
 # 💸 Expense Tracker (Vanilla JS + Bootstrap)
-link - https://zingy-choux-cb4c92.netlify.app/
+[link] (https://1-expense-tracker.netlify.app/)
 
 This is a lightweight Expense Tracker web app built using **HTML**, **CSS**, **JavaScript**, and **Bootstrap**. It allows users to add, edit, and delete expense records, with data saved in **localStorage** for persistence across sessions.
 
