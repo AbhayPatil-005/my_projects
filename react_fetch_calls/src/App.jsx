@@ -3,8 +3,10 @@ import { MovieList } from './components/MovieList'
 
 function App() {
   const [movie, setMovie] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
  
   async function fetchMovieHandler(){
+    setIsLoading(true);
     const response = await fetch("https://swapi.tech/api/films/");
     const data = await response.json();
 
@@ -16,6 +18,7 @@ function App() {
     }));
 
     setMovie(transformedMovies);
+    setIsLoading(false);
   }
 
   return (
@@ -24,7 +27,8 @@ function App() {
         <button onClick={fetchMovieHandler}>Fetch Movies</button>
       </section>
       <section>
-        <MovieList movieList={movie}/>
+        {!isLoading && <MovieList movieList={movie}/>}
+        {isLoading && <p>Loading...</p>}
       </section>
         
     </>
