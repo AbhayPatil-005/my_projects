@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { MovieList } from './components/MovieList'
 
 function App() {
   const [movie, setMovie] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
- 
+
   async function fetchMovieHandler(){
     setIsLoading(true);
     const response = await fetch("https://swapi.tech/api/films/");
@@ -20,6 +20,9 @@ function App() {
     setMovie(transformedMovies);
     setIsLoading(false);
   }
+    useEffect(()=>{fetchMovieHandler()},[]);
+
+
 
   return (
     <>
