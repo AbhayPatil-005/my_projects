@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { MovieList } from './components/MovieList'
+import AddMovie from './components/addMovie';
 
 function App() {
   const [movie, setMovie] = useState([]);
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <>
+      <AddMovie/>
       <section>
         <button onClick={fetchMovieHandler}>Fetch Movies</button>
       </section>
