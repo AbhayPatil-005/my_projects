@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddMovie = () =>{
+const AddMovie = ({onUpdate}) =>{
     const [movie, setMovie] = useState({
         title:"",
         openingText:"",
@@ -14,9 +14,18 @@ const AddMovie = () =>{
             [e.target.name]: e.target.value
         })
     }
-    const addMovieHandler = (e)=>{
+    const addMovieHandler = async(e)=>{
             e.preventDefault()
-            console.log(movie)
+            const response = await fetch("https://react-project-fd0a2-default-rtdb.firebaseio.com/movies.json",{
+                method:'Post',
+                body: JSON.stringify(movie),
+                headers:{
+                    'Content-Type' : 'application/json'
+                }
+            });
+            const data = await response.json();
+            console.log(data)
+            onUpdate();
             setMovie({
                 title: "",
                 openingText: "",
@@ -45,7 +54,7 @@ const AddMovie = () =>{
                         />
                 </div>
                 <div>
-                    <label>Title 
+                    <label>Release Date 
                         <input 
                         type="text"
                         name="releaseDate"

@@ -1,6 +1,6 @@
 import { Movie } from "./Movie";
 
-export const MovieList = ({ movieList }) => {
+export const MovieList = ({ movieList, onUpdate }) => {
   return (
     <ul>
       {movieList.map((movie) => (
@@ -10,6 +10,7 @@ export const MovieList = ({ movieList }) => {
           title={movie.title}
           openingText={movie.openingText}
           releaseDate={movie.releaseDate}
+          onUpdate={onUpdate}
         />
       ))}
     </ul>

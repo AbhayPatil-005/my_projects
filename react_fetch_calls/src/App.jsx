@@ -5,34 +5,48 @@ import AddMovie from './components/addMovie';
 function App() {
   const [movie, setMovie] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const fetchMovieHandler = useCallback(async()=>{
     setIsLoading(true);
-    const response = await fetch("https://swapi.tech/api/films/");
+    setError(null)
+    try{
+      const response = await fetch("https://react-project-fd0a2-default-rtdb.firebaseio.com/movies.json");
+      if(!response.ok){
+        throw new Error("Fetching data failed")
+      }
     const data = await response.json();
+    
+    const loadedMovies = [];
 
-    const transformedMovies = data.result.map(film => ({
-      id: film.properties.episode_id,
-      title: film.properties.title,
-      openingText: film.properties.opening_crawl,
-      releaseDate: film.properties.release_date
-    }));
+    for (const key in data){  
+      loadedMovies.push({
+        id: key,
+        title: data[key].title,
+        openingText: data[key].openingText,
+        releaseDate: data[key].releaseDate,
+      });
+    }
 
-    setMovie(transformedMovies);
+    setMovie(loadedMovies);
+    } catch(error) {
+        setError(error.message || 'Something went wrong')
+    }
     setIsLoading(false);
   },[])
+
     useEffect(()=>{fetchMovieHandler()},[fetchMovieHandler]);
 
 
 
   return (
     <>
-      <AddMovie/>
+      <AddMovie onUpdate={fetchMovieHandler}/>
       <section>
         <button onClick={fetchMovieHandler}>Fetch Movies</button>
       </section>
       <section>
-        {!isLoading && <MovieList movieList={movie}/>}
+        {!isLoading && !error && <MovieList movieList={movie} onUpdate={fetchMovieHandler}/>}
         {isLoading && <p>Loading...</p>}
       </section>
         
