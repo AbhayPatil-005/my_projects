@@ -6,6 +6,10 @@ const counterReducer = (state={counter : 1}, action) => {
             return{counter: state.counter + 1}
         }else if(action.type==="DECREMENT"){
             return{counter:state.counter - 1}
+        }else if(action.type === "INCREMENTBY2"){
+            return{counter: state.counter + 2}
+        }else if(action.type === "DECREMENTBY2"){
+            return{counter: state.counter - 2}
         }else{
             return state;
         }
@@ -28,3 +32,5 @@ store.subscribe(counterSubscriber);
 store.dispatch({type:"INCREMENT"})
 store.dispatch({type:"INCREMENT"})
 store.dispatch({type:"DECREMENT"})
+store.dispatch({type:"INCREMENTBY2"})
+store.dispatch({type:"DECREMENTBY2"})
