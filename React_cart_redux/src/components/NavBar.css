@@ -1,0 +1,25 @@
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgb(226, 220, 245);
+
+    height: 60px;
+    padding:10px
+}
+#cart-count{
+    border: 1px solid black;
+    border-radius: 50px;
+    padding:1px 10px 1px 10px;
+}
+#my-cart{
+    padding: 10px;
+}
+.brand-name{  
+    font-size: 2rem ;
+    color:rgb(107, 15, 192);
+    
+}
