@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
+import toggleSlice from "./toggle-slice";
 
 
 const store = configureStore({
-    reducer:{},
+    reducer:{ toggleUI : toggleSlice.reducer},
 })
 
 export default store;

@@ -1,6 +1,7 @@
 import './Cart.css';
 
 const Cart = () =>{
+
     return(<><div className='your-cart'>
         <div className='cart-item'>
             <div className='cart-item-div-1'>
