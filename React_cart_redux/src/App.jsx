@@ -1,14 +1,18 @@
-import { useSelector } from 'react-redux'
+import {useEffect} from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import NavBar from './components/NavBar'
 import Menu from './components/Menu'
 import Cart from './components/cart'
-
+import { toggleActions } from './components/store/toggle-slice'
+import Notification from './components/Notification'
 
 let isInitial = true;
 
 function App() {
+  const dispatch = useDispatch();
   const showCart = useSelector((state)=> state.toggleUI.cartIsVisible);
   const notification = useSelector((state) => state.toggleUI.notification);
+  const cart = useSelector((state)=>state.cart);
 
   useEffect(()=>{
     const sendCartData = async()=>{
@@ -56,10 +60,10 @@ function App() {
  
   return (
     <>
-    {<div className="notification">
-      <div>{notification.title}</div>
-      <div>{notification.message}</div>
-    </div>}
+    {notification && <Notification 
+          status={notification.status}
+          title={notification.title}
+          message={notification.message}/>}
     <header><NavBar/></header>
     <main>
       {showCart && <Cart/>}
