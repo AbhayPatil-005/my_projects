@@ -1,18 +1,26 @@
-import {useEffect} from 'react'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import NavBar from './components/NavBar'
 import Menu from './components/Menu'
 import Cart from './components/cart'
 import { toggleActions } from './components/store/toggle-slice'
 import Notification from './components/Notification'
-
-let isInitial = true;
+import { fetchCartData, sendCartData } from './components/store/cart-slice'
 
 function App() {
   const dispatch = useDispatch();
   const showCart = useSelector((state)=> state.toggleUI.cartIsVisible);
   const notification = useSelector((state) => state.toggleUI.notification);
   const cart = useSelector((state)=>state.cart);
+
+  useEffect(() => {
+    dispatch(fetchCartData());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (!cart.changed) return;
+    dispatch(sendCartData(cart));
+  }, [cart, dispatch]);
 
   useEffect(()=>{
     const sendCartData = async()=>{
@@ -23,16 +31,7 @@ function App() {
           message: 'Sending cart data!',
         })
       );
-      const response =  await fetch(
-        'https://react-project-fd0a2-default-rtdb.firebaseio.com/cart.json',{
-          method:'PUT',
-          body: JSON.stringify(cart),
-        }
-      );
-
-      if (!response.ok){
-        throw new Error('Sending cart data failed.');
-      }
+      
 
       dispatch(toggleActions.showNotification({
         status:'success',
@@ -41,12 +40,6 @@ function App() {
         })
       );
     } 
-  
-  if(isInitial){
-      isInitial = false;
-      return;
-    }
-
     sendCartData().catch((error)=>{
       dispatch(
         toggleActions.showNotification({
@@ -57,6 +50,7 @@ function App() {
       )
     })
   }, [cart, dispatch]);
+
  
   return (
     <>
